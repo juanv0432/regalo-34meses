@@ -1,0 +1,167 @@
+/* Importamos una fuente bonita y romántica */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Pacifico&display=swap');
+
+/* --- Estilos Generales (Móvil primero) --- */
+.head {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 4px solid #ff85a1;
+    border-radius: 20px;
+    padding: 20px; /* Menos espacio en celulares */
+    width: 90%;    /* Ocupa casi todo el ancho en móvil */
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(255, 133, 161, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #ff4d6d;
+    font-size: 1.8rem; /* Tamaño más pequeño para móvil */
+}
+
+/* --- Media Query para pantallas más grandes (PC/Tablets) --- */
+@media (min-width: 768px) {
+    .head {
+        padding: 40px; /* Más espacio en pantallas grandes */
+        width: 100%;   /* Deja que el max-width tome el control */
+    }
+    h1 {
+        font-size: 2.5rem; /* Título más grande en PC */
+    }
+}
+
+body {
+    background-color: #ffeef2; /* Rosa muy clarito */
+    background-image: radial-gradient(#ffc1d6 1px, transparent 1px);
+    background-size: 20px 20px; /* Fondo sutil de puntitos */
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.btn-musica {
+    background-color: #ff85a1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 133, 161, 0.3);
+    display: flex;
+}
+
+.btn-musica:hover {
+    background-color: #ff4d6d;
+    transform: scale(1.05);
+}
+
+.btn-musica:active {
+    transform: scale(0.95);
+}
+
+.head {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 4px solid #ff85a1; /* Rosa Hello Kitty */
+    border-radius: 30px;
+    padding: 40px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(255, 133, 161, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoración con corazones flotantes */
+.head::before {
+    content: "🌸";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+}
+
+.head::after {
+    content: "🎀";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    color: #ff4d6d;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    white-space: pre-wrap; /* Para que respete los saltos de línea de tu carta */
+}
+
+/* Un toque extra: Animación suave al cargar */
+.head {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Primero, aseguramos que el contenedor sea la referencia */
+.head {
+    position: relative; /* Muy importante para que las imágenes no se escapen del cuadro */
+    padding-top: 60px;  /* Espacio extra arriba para la imagen */
+    padding-bottom: 60px;
+}
+
+/* Estilo general para las imágenes decorativas */
+.decoracion {
+    position: absolute;
+    width: 80px; /* Tamaño ajustable */
+    height: auto;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); /* Sombra suave para que resalten */
+    transition: transform 0.3s ease; /* Efecto para cuando pases el mouse */
+}
+
+.decoracion:hover {
+    transform: scale(1.1) rotate(5deg); /* Se agrandan un poquito al tocarlas */
+}
+
+/* Ubicación específica */
+.kitty {
+    top: -20px;   /* Sobresale un poquito por arriba */
+    left: -20px;  /* Sobresale por la izquierda */
+}
+
+.ajolote {
+    bottom: -15px; /* Sobresale por abajo */
+    right: -15px;  /* Sobresale por la derecha */
+}
+
+/* Ajuste para celulares (Responsive) */
+@media (max-width: 768px) {
+    .decoracion {
+        width: 60px; /* Más pequeñas en móvil */
+    }
+    .kitty {
+        top: -10px;
+        left: 10px;
+    }
+    .ajolote {
+        bottom: -10px;
+        right: 10px;
+    }
+}
